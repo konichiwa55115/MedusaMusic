@@ -59,8 +59,7 @@ async def start_cmd(_, msg: Message):
     if msg.chat.type == 'private':
         await msg.reply(
             text=PMTEXT,
-            reply_markup=PMKEYBOARD,
-            disable_web_page_preview=True
+            reply_markup=PMKEYBOARD
         )
     else:
         await msg.reply(
