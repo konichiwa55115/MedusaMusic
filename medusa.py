@@ -17,10 +17,11 @@ Medusa = Client(
 
 
 PMTEXT = (
-    "<a href='https://en.wikipedia.org/wiki/Medusa'>**Medusa**</a> is a Greek mythology.\n"
-    "__Generally described as winged human females with living venomous snakes in place of hair."
-    " Those who gazed into her eyes would turn to stone.\nThe word '**Mousiki**' is the Greek word for"
-    " '**Music**'.__\n\n**However, I can download youtube songs for u immediately :)**\n__Check **help** to see the usage__"
+    "السلام عليكم . أنا بوت أقوم بتحميل الدروس الصوتية من يوتيوب \n "
+    "فقط اكتب اسم الدرس الذي تريد مسبوقاً بـ /get \n "
+    " مثلاً /get السنة لعبدالله بن أحمد 01 الخليفي \n "
+    " لبقية البوتات هنا https://t.me/ibnAlQyyim/1120 \n"
+    " لدعم استمرار المشروع هنا http://paypal.me/kelectronic89 \n"
 )
 PMKEYBOARD = InlineKeyboardMarkup(
     [
@@ -31,24 +32,19 @@ PMKEYBOARD = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                'Add me to a group 🎊', url='http://t.me/MedusaMousikibot?startgroup=true')  # Replace the `MedusaMousikibot` with your bot username
+                'إضافة لجروب  🎊', url='http:t.me/audmergbot?startgroup=true')  # Replace the `MedusaMousikibot` with your bot username
         ]
     ]
 )
 HELPTEXT = (
-    '**Help Menu:**\n\nIf u need to download a song,'
-    ' u should follow the syntax shown as below.\n\n'
-    '•`/song <name of the song>`\n\nIf u need to extract lyrics,'
-    ' follow the syntax shown as bellow.\n\n•`/lyrics <query>`'
+   'كما قلت سابقاً . فقط اسكتب اسم الدرس مسبوقاً بالأمر /get \n'
 )
 ABOUTTEXT = (
-    "**Name** : MedusaMusic🎵\n**Username** : MedusaMousikibot\n**Description**"
-    " : <a href='https://en.wikipedia.org/wiki/Medusa'>**Medusa**</a> is a Greek"
-    " mythology.\n__Generally described as winged human females with living"
-    " venomous snakes in place of hair. Those who gazed into her eyes would"
-    " turn to stone.\nThe word '**Mousiki**' is the Greek word for"
-    " '**Music**'.__\n**Version** : 2.3.1\n**Special Credits:**\n\t•Credit of"
-    " lyrics: __genius.com__\n\nProject by Bibee"
+     "السلام عليكم . أنا بوت أقوم بتحميل الدروس الصوتية من يوتيوب \n "
+    "فقط اكتب اسم الدرس الذي تريد مسبوقاً بـ /get \n "
+    " مثلاً /get السنة لعبدالله بن أحمد 01 الخليفي \n "
+    " لبقية البوتات هنا https://t.me/ibnAlQyyim/1120 \n"
+    " لدعم استمرار المشروع هنا http://paypal.me/kelectronic89 \n"
 )
 
 
@@ -76,7 +72,7 @@ async def start_cmd(_, msg: Message):
                         InlineKeyboardButton(
                             text='Start me in PM :)',
                             # Replace the `MedusaMousikibot` with your bot username
-                            url=f't.me/MedusaMousikibot?start=help'
+                            url=f't.me/audmergbot?start=help'
                         )
                     ]
                 ]
