@@ -14,7 +14,7 @@ text = (
 descargar = Descargar('downloads/')
 
 @Medusa.on_message(
-    filters.command(['song'],prefixes=['/', '!'])
+    filters.command(['get'],prefixes=['/', '!'])
     & (filters.group | filters.private)
     & ~ filters.edited)
 async def song_dl(_, msg: Message):
@@ -22,7 +22,7 @@ async def song_dl(_, msg: Message):
     if len(msg.command) == 1:
         return await msg.reply(text=text, parse_mode='md')
 
-    r_text = await msg.reply('Processing...')
+    r_text = await msg.reply('جاري المعالجة')
     url = msg.text.split(None, 1)[1]
     url = extract_the_url(url=url)
     
