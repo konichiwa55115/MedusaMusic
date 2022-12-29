@@ -28,7 +28,7 @@ PMKEYBOARD = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 'Help ❓', callback_data='help_callback'),
-            InlineKeyboardButton('About ❕', callback_data='about')
+            InlineKeyboardButton('عن البوت ❕', callback_data='about')
         ],
         [
             InlineKeyboardButton(
