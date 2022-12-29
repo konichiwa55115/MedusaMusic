@@ -64,7 +64,7 @@ async def start_cmd(_, msg: Message):
     " مثلاً /get السنة لعبدالله بن أحمد 01 الخليفي  "
     " لبقية البوتات هنا https://t.me/ibnAlQyyim/1120 "
     " لدعم استمرار المشروع هنا http://paypal.me/kelectronic89"
-)
+),
             reply_markup=InlineKeyboardMarkup(
     [
         [
