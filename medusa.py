@@ -58,8 +58,26 @@ async def start_cmd(_, msg: Message):
 
     if msg.chat.type == 'private':
         await msg.reply(
-            text=PMTEXT,
-            reply_markup=PMKEYBOARD
+            text=(
+    "السلام عليكم . أنا بوت أقوم بتحميل الدروس الصوتية من يوتيوب  "
+    "فقط اكتب اسم الدرس الذي تريد مسبوقاً بـ /get  "
+    " مثلاً /get السنة لعبدالله بن أحمد 01 الخليفي  "
+    " لبقية البوتات هنا https://t.me/ibnAlQyyim/1120 "
+    " لدعم استمرار المشروع هنا http://paypal.me/kelectronic89"
+)
+            reply_markup=InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton(
+                'Help ❓', callback_data='help_callback'),
+            InlineKeyboardButton('عن البوت ❕', callback_data='about')
+        ],
+        [
+            InlineKeyboardButton(
+                'إضافة لجروب  🎊', url='http:t.me/audmergbot?startgroup=true')  # Replace the `MedusaMousikibot` with your bot username
+        ]
+    ]
+)
         )
     else:
         await msg.reply(
