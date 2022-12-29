@@ -17,11 +17,11 @@ Medusa = Client(
 
 
 PMTEXT = (
-    "السلام عليكم . أنا بوت أقوم بتحميل الدروس الصوتية من يوتيوب \n "
+    "__السلام عليكم . أنا بوت أقوم بتحميل الدروس الصوتية من يوتيوب \n "
     "فقط اكتب اسم الدرس الذي تريد مسبوقاً بـ /get \n "
     " مثلاً /get السنة لعبدالله بن أحمد 01 الخليفي \n "
     " لبقية البوتات هنا https://t.me/ibnAlQyyim/1120 \n"
-    " لدعم استمرار المشروع هنا http://paypal.me/kelectronic89 \n"
+    " لدعم استمرار المشروع هنا http://paypal.me/kelectronic89__ \n"
 )
 PMKEYBOARD = InlineKeyboardMarkup(
     [
@@ -37,14 +37,14 @@ PMKEYBOARD = InlineKeyboardMarkup(
     ]
 )
 HELPTEXT = (
-   'كما قلت سابقاً . فقط اسكتب اسم الدرس مسبوقاً بالأمر /get \n'
+   'كما قلت سابقاً . فقط اسكتب اسم الدرس مسبوقاً بالأمر__ /get __ \n'
 )
 ABOUTTEXT = (
-     "السلام عليكم . أنا بوت أقوم بتحميل الدروس الصوتية من يوتيوب \n "
+     "__السلام عليكم . أنا بوت أقوم بتحميل الدروس الصوتية من يوتيوب \n "
     "فقط اكتب اسم الدرس الذي تريد مسبوقاً بـ /get \n "
     " مثلاً /get السنة لعبدالله بن أحمد 01 الخليفي \n "
     " لبقية البوتات هنا https://t.me/ibnAlQyyim/1120 \n"
-    " لدعم استمرار المشروع هنا http://paypal.me/kelectronic89 \n"
+    " لدعم استمرار المشروع هنا http://paypal.me/kelectronic89 __ \n"
 )
 
 
@@ -64,12 +64,12 @@ async def start_cmd(_, msg: Message):
         )
     else:
         await msg.reply(
-            text='Hey! I am Online. PM me if you have any question on how to use me.',
+            text='أنا أعمل . لمعرفة طريقة استعمالي . زرني على الخاص',
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text='Start me in PM :)',
+                            text='أضفني كأدمن في الجروب  :)',
                             # Replace the `MedusaMousikibot` with your bot username
                             url=f't.me/audmergbot?start=help'
                         )
