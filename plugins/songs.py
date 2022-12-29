@@ -7,9 +7,8 @@ from youtubesearchpython import VideosSearch
 
 
 text = (
-    '__I can\'t guess the song which in your mind.'
-    ' So please be kind to specify the song name.__'
-    '\n\nSyntax: ```/song <song name>```'
+  'لا أستطيع تحديد المقطع الذي تريد \n '
+  'استخدم كلمات دلالية أكثر دقة \n '
 )
 
 descargar = Descargar('downloads/')
@@ -29,16 +28,16 @@ async def song_dl(_, msg: Message):
     
     if url == 0:return await r_text.edit('I could not find that song. Try with another keywords...')
 
-    await r_text.edit('Downloading...')
+    await r_text.edit('يتم التنزيل...')
 
     ytinfo = descargar.get_song(url)
 
     if ytinfo == 0:
-        await r_text.edit(f'Something Wrong\n\n☕️Take a Coffee and come again... :(')
+        await r_text.edit(f'حدث خطأ ما:(')
         return
 
     try:
-        await r_text.edit_text('Uploading...')
+        await r_text.edit_text('يتم الرفع...')
     except MessageNotModified:
         pass
 
@@ -48,7 +47,7 @@ async def song_dl(_, msg: Message):
             duration=int(ytinfo.length),
             performer=str(ytinfo.author),
             title=f'{str(ytinfo.title)}',
-            caption=f"<a href='{url}'>__{ytinfo.title}__</a>\n\n__Downloaded by @MedusaMousikibot__"
+            caption=f"<a href='{url}'>__{ytinfo.title}__</a>\n\n__تم تحميله بواسطة @audmergbot__"
         )
 
     await r_text.delete()
@@ -57,7 +56,7 @@ async def song_dl(_, msg: Message):
 
 
 def extract_the_url(url: str):
-    '''Extracting the youtube URL'''
+    '''جاري استخراج عنوان الفيديو'''
 
     v = VideosSearch(url, limit=1)
     v_result = v.result()
