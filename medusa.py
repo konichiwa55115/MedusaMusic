@@ -17,11 +17,11 @@ Medusa = Client(
 
 
 PMTEXT = (
-    "__السلام عليكم . أنا بوت أقوم بتحميل الدروس الصوتية من يوتيوب \n "
+    "السلام عليكم . أنا بوت أقوم بتحميل الدروس الصوتية من يوتيوب \n "
     "فقط اكتب اسم الدرس الذي تريد مسبوقاً بـ /get \n "
     " مثلاً /get السنة لعبدالله بن أحمد 01 الخليفي \n "
     " لبقية البوتات هنا https://t.me/ibnAlQyyim/1120 \n"
-    " لدعم استمرار المشروع هنا http://paypal.me/kelectronic89__ \n"
+    " لدعم استمرار المشروع هنا http://paypal.me/kelectronic89"
 )
 PMKEYBOARD = InlineKeyboardMarkup(
     [
@@ -57,7 +57,6 @@ async def start_cmd(_, msg: Message):
     ''' Response for /start command (private or groupe) '''
 
     if msg.chat.type == 'private':
-        await msg.reply_sticker(sticker='CAACAgIAAx0CXeethQACBIthRB3WPePSpGljt548kGW3uJ0s3gACkAUAAtJaiAGaVzjS0OoLfh4E')
         await msg.reply(
             text=PMTEXT,
             reply_markup=PMKEYBOARD,
